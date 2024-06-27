@@ -1,0 +1,71 @@
+
+
+/* ✅ Display property 디스플레이 속성 */
+
+/* 3개가 존재함 */
+/* 1. 인라인 2. 블록 3. 인라인 블록 */
+
+/* ✅ h1은 블록 레벨 요소, display 속성으로 변경해줄 수 있음 */
+/* h1 {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    display: inline;
+} */
+
+/* span {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    display: block;
+} */
+
+/* 
+div {
+    background-color: orangered;
+    border: 1px solid black;
+    display: inline;
+} */
+
+/* ✅ 요소가 인라인 디스플레이라면 너비나 높이는 무시함 */
+/* 여백이나 패딩을 바꾸면? */
+#spantest {
+    background-color: palevioletred;
+    border: 1px solid black;
+    /* width를 변경해도 변화가 없음, 인라인 요소이기에 */
+    width: 100px;
+    /* padding은 적용됨 but, 내용을 밀어내거나 공간을 차지하지 않음 */
+    /* padding은 요소의 하나로 존재, 내용에 영향 x */
+    padding: 10px;
+    /* margin은 가로줄에만 영향을 미침 */
+    margin: 100px;
+}
+
+h1 {
+    background-color: paleturquoise;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    padding: 50px; 
+    margin: 100px;
+
+    /* display 없음 설정, 웹페이지에 있으나 우리 눈에 보이지 않는 설정 */
+    /* javascript에서 쓰일 예정 */
+    /* display: none; */
+}
+
+
+/* ✅ 인라인 블록 */
+/* 인라인으로 작용하지만 가로,세로,여백,패딩이 적용됨 */
+
+.divtest {
+    height: 200px;
+    width: 200px;
+    background-color: olivedrab;
+    border: 5px solid black;
+    
+    /* inline요소에는 가로,세로가 적용x */
+    /* display: inline; */
+
+    /* inline-block은 공간을 공유함 */
+    display: inline-block;
+    margin: 50px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heaviest Birds Table</title>
+</head>
+<body>
+    <h1>Heaviest Birds</h1>
+    <table>
+        <!-- tr(행), td(셀 내부 데이터값), th(셀 헤더값) -->
+        <!-- <thead>, <tbody>, <tfoot> table을 논리 section으로 구분 -->
+        <thead>
+            <tr> 
+                <th>Animal</th>
+                <th>Average mass [kg (lb)]</th>
+                <th>Average total length [cm (ft)]</th>
+                <th>Flighted</th>
+            </tr>
+        </thead>    
+        <tbody>
+            <tr>
+                <td>Common ostrich</td>
+                <td>104 kg (229 lb)</td>
+                <td>115 cm (3.77 ft)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali ostrich</td>
+                <td>90 kg (220 lb)</td>
+                <td>109-140 cm (3.3-4.3 ft)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Turkey</td>
+                <td>13.5 kg (30 lb)</td>
+                <td>100-124.9cm (3.28-4.10 ft)</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>V2</h2>
+    <table>
+        <!-- tr(행), td(셀 내부 데이터값), th(셀 헤더값) -->
+        <!-- <thead>, <tbody>, <tfoot> table을 논리 section으로 구분 -->
+        <thead>
+            <tr> 
+                <th rowspan="2">Animal</th>
+                <th colspan="2">Average Mass</th>
+                <th rowspan="2">Flighted</th>
+            </tr>
+            <tr>
+                <th>KG</th>
+                <th>LB</th>
+            </tr>
+        </thead>    
+        <tbody>
+            <tr>
+                <td>Common ostrich</td>
+                <td>104</td>
+                <td>230</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali ostrich</td>
+                <td>90</td>
+                <td>220</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Turkey</td>
+                <td>13.5</td>
+                <td>30</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

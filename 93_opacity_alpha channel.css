@@ -1,0 +1,22 @@
+section {
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    /* 배경에만 투명도 적용 */
+    /* background-color: rgba(255,255,255,0.7); */
+    /* hex 코드의 경우 00 완전 투명, FF 완전 불투명(FF는 표시할 필요가 없어서 사라짐) */
+    background-color: #790065c9;
+}
+
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    /* opacity ID 배경, 폰트 등 전체 요소에 투명도 적용 */
+    opacity: 0.3;
+}

@@ -1,0 +1,60 @@
+
+/* 선택자 selector */
+
+/* 전체 선택자 Universal selector */
+* {
+    color:orange;
+    background-color: cyan;
+}
+
+/* 요소 선택자 element selector */
+/* 지정된 타입의 모든 항목을 선택 */
+button {
+    font-size: 50px;
+}
+
+/* 선택자 여러 개 합치기 selector list  */
+h1, h2 {
+    color: red;
+}
+
+/* ID selector */
+/* ID는 1 page에 1개만 나와야 함. 고유 식별자임. */
+/* ID 앞에 #(해시태그)를 꼭 붙이기 */
+/* 빈 곳은 없어야 함 */
+/* ID를 최소화하는게 좋다고 함, 모든 걸 다르게 표현하려고 많이 만들지 말기, 다른 표현도 많음 */
+#search {
+    background-color: rgb(197, 80, 26);
+    color:#c47433;
+}
+
+/* Class selector 클래스 선택자 */
+/* class는 여러 요소에 적용됨. 요소를 묶어 주기에 그룹을 만듦 */
+
+
+
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+    text-decoration: #f78120 underline wavy;
+    letter-spacing: 15px;
+    font-size: 80px;
+    font-family: fantasy;
+}
+
+h2 {
+    color: indigo;
+    background-color: plum;
+}
+
+button{
+    color: magenta;
+    background-color: cyan;
+}
+
+p {
+    color: olive;
+}
+
+
