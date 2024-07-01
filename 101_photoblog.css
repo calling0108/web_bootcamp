@@ -1,0 +1,22 @@
+nav {
+    font-family: montserrat, Roboto;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f1f1f1;
+    width: 60%;
+    margin-left: calc(10%/6);
+    padding: 1.2em 0;
+}
+
+/* ✅hr이 안 사라짐.. */
+hr{
+    display: none;
+}
+
+/* ✅ %로 하면 이미지 크기가 유동성있게 변함 */
+img {
+    width: 30%;
+    /* margin: 1.666666%; */
+    margin: calc(10%/6);
+}

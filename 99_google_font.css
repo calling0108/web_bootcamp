@@ -1,4 +1,4 @@
-.roboto-thin {
+/* .roboto-thin {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -8,4 +8,25 @@
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
+} */
+
+/* ✅ 글꼴 전체 적용 */
+body {
+    font-family: Montserrat, Roboto, sans-serif;
 }
+
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* ✅ h1에 글꼴 굵기를 변경, 100과 400 값만을 가져왔기에 100 & 400의 근사값으로 따라가게 됨 */
+h1 {
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: Roboto, sans-serif;
+}
+
+/* ✅ 글꼴에 공백이 있으면 '' or "" 따옴표 넣어주기 */
