@@ -157,6 +157,7 @@ img {
     object-fit: cover;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .pricing-header {
