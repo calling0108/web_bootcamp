@@ -146,4 +146,22 @@ body {
 
 .panel {
     background-color: white;
+    margin: 200px auto;
+    width: 80%;
+    border-radius: 1em;
+    display: flex;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pricing-header {
+    font-size: 1em;
+    color: aquamarine;
+    text-align: center;
 }
