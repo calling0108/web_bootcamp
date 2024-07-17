@@ -1,0 +1,170 @@
+/* ✅ select all elements 전체 선택자 */
+* {
+    background-color: #f5f4d2;
+}
+
+button {
+    font-size: 30px;
+    background-color: #a8dadc;
+}
+
+h1, h2 {
+    color: #1d3557;
+}
+
+#signup {
+    background-color: #1d3557;
+    color: #f1faee;
+}
+
+span {
+    color: #457b9d;
+}
+
+/* ✅ class selector 클래스 선택자 */
+.tag {
+    background-color: #e63946;
+    color: #f1faee;
+    font-size: 16px;
+    letter-spacing:5px;
+
+}
+
+/* ✅ descendant selector 자손 선택자 */
+/* 띄어쓰기를 이용 */
+
+/* li a : li 태그에 중첩된 모든 anchor 자손 요소를 선택하라 */
+/* 이때 li 태그는 선택하는게 아님. */
+.post a {
+    color: #457b9d;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a {
+    color: #e63946;
+}
+
+
+/* ✅ Adjacent selector 인접 선택자(combinator 결합자), Direct child 직계 자손 선택자 */
+
+/* 인접 선택자(+) : h1 + p {color: red;} */
+
+/* input 태그와 형제 관계인 button의 배경색 변경 */
+input + button {
+    background-color: pink;
+}
+
+/* h2 태그와 형제 관계인 button의 폰트 크기 변경 */
+h2 + button {
+    font-size: 20px;
+}
+
+/* Direct child  */
+/* 직계 자손 선택자 : div > li { color: white; } div 안에 있는 li 모두가 아닌 바로 아래 있는 li(직계 자손)를 선택함, 한 단계 아래만 선택한다는 뜻 */
+
+footer > a {
+    color: #457b9d;
+}
+
+/* ✅ Attribute selector 속성 선택자 */
+/* input[type="texts"] {width:300px; color: yellow; */
+
+/* 특정 속성을 가진 요소를 선택 가능 */
+/* type = text(속성)인 모든 input을 선택할 때 속성 선택자 사용 */
+
+/* 속성 선택자는 거의 쓰이지 않음.  */
+
+input[type="password"] {
+    color: greenyellow;
+}
+
+/* section[class="post"] {
+    background-color: lightblue;
+} */
+
+/* section.post {
+    background-color: lightcoral;
+} */
+
+/* += : anchor 태그 내 어디든 포함되어 있으면! */
+a[href*="google"] {
+    color: green;
+}
+
+/* ✅ Pseudo Classes 가상(유사) 클래스 */
+/* 커서를 올려두었을 때 특정한 반응 or 시각적 효과 주기 */
+.post a:hover {
+    color: #3a0ca3;
+    text-decoration: underline;
+}
+
+/* class post 내에 있는 button에  hover 적용 */
+.post button:hover {
+    background-color: #003566;
+    color: white;
+}
+
+/* 클릭 시 변경 */
+.post button:active {
+    background-color: #02c39a;
+}
+
+/* nth-of-type(n) : n번째 선택(일회성) */
+/* 숫자 뒤 'n'을 붙이면 n번째 선택 */
+/* odd(홀수), even(짝수) 등으로 기재해도 됨 */
+/* 2n + 1 등 수식도 가능 */
+.post:nth-of-type(3n) {
+    background-color: #ece198;
+
+}
+
+input:placeholder-shown {
+    color: green;
+    background-color: #3a0ca3;
+    border: solid lightseagreen;
+    border-radius: 20px;
+}
+
+
+/* ✅ Pseudo elments 가상 요소 */
+/* ::after, ::before, ::first-letter, ::first-line, ::selection */
+/* :: 2개가 아닌 1개도 작동함 */
+/* 가상 클래스도 :: 2개를 사용해도 chrome은 유추해냄 */
+
+h2::first-letter {
+    font-size:30px;
+}
+
+p::first-line {
+    color: purple;
+} 
+
+p::selection {
+    background-color: #e63946;
+    color: white;
+}
+
+/* ✅ The CASCADE */
+/* 적용된 스타일의 순서가 중요하다는 의미 */
+/* 아래 적용된 순서로 업데이트 됨. 새로 링크된 style sheet도 마찬가지 */
+
+
+/* ✅ Specificity 특이도 */
+/* 충돌이 생길 경우 브라우저에서 규칙을 적용하는 방법 */
+/* 하나 이상의 스타일이 동일한 요소에 적용되거나 적용될 수 있는 경우 충돌이 발생 */
+/* 충돌이 발생할 경우, 브라우저는 더 구체적인 선택자를 우선 적용함 */
+/* 📌 우선 순위 : ID > Class > Element */
+
+/* ✅  !important : 가장 높은 명시도 강제로 올림 */
+/* 사용하지 않는게 좋으나 경우에 따라 사용 */
+
+/* ✅ Inline style 인라인 스타일 */
+/* html body 문서 태그 내에 style 태그를 작성하는 것 : 혼동을 줄 수 있어서 사용하지 않는게 좋음 */
+
+
+/* ✅ Inheritance 상속 */
+/* inherit : 상속받다, 물려받다 */
+/* 구체적인 특성을 지정하지 않은 하위 요소에 상위 항목 특성이 적용되는 것 */
+/* 상속받지 않게 설정된 요소가 있음, property: inherit; 을 하면 상위 요소 특성이 상속됨. */
+/* 아예 상속이 불가한 요소도 있음 : border */
