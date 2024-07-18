@@ -1,0 +1,70 @@
+/* css 파일 import */
+@import "./reset.css";
+
+html {
+    font-family: "opensans";
+    text-transform: uppercase;
+    background-color: #549ffe;
+}
+
+.panel {
+    background-color: white;
+    margin: 15% auto;
+    padding: 10px;
+    width: 75%;
+    border-radius: 1%;
+    box-shadow: 1px 1px 10px gray;
+    display: flex;
+}
+
+.pricing-plan {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.pricing-img {
+    width: 75%;
+    height: 35%;
+    object-fit: cover;
+}
+
+.pricing-header {
+    color: #6F6F6F;
+    font-size: 0.7em;
+    border-bottom: 1px solid #549efe3a;
+    padding: 10px 0 40px 0;
+    margin: 10px 20px;
+}
+
+.pricing-features {
+    margin: 0;
+    padding: 0;
+}
+
+.pricing-features-item {
+    color: #377ADE;
+    margin: auto auto;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #549efe3a;
+    font-weight: bold;
+    font-size: 0.5em;
+    list-style: none;
+}
+
+.pricing-price {
+    display: block;
+    color: #0260F4;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 10px auto;
+}
+
+.pricing-button {
+    text-decoration: none;
+    border: 1px solid #549FFE;
+    margin: 50px auto;
+    padding: 5px 30px;
+    border-radius: 0.5em;
+}
