@@ -11,13 +11,29 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <!-- <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
-    </nav>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
-    </nav>
-    
+    </nav> -->
+    <div class="container-fruid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="expandme">
+                <div class="navbar-nav">
+                    <a href="Home" class="nav-item nav-link">Home</a>
+                    <a href="Home" class="nav-item nav-link">About</a>
+                    <a href="Home" class="nav-item nav-link">Contack</a>
+                </div>
+                <form class="form-inline ml-auto">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
     <div class="container">
         <h1 class="display-1 text-center text-primary">CSS Bootstrap Playground</h1>
 
