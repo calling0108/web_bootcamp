@@ -11,9 +11,16 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </nav>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </nav>
+    
     <div class="container">
         <h1 class="display-1 text-center text-primary">CSS Bootstrap Playground</h1>
-        
+
         <h2 class="display-4">The Grid System</h2>
         <div class="row">
             <div class="col-2 bg-success">I am 2 UNITS</div>
@@ -33,26 +40,79 @@
 
         <div class="display-4">Responsive Grid</div>
         <div class="row">
-            <div class="col-md-3 col-xl-3 bg-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
-            <div class="col-md-3 col-xl-3 bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
-            <div class="col-md-3 col-xl-3 bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
-            <div class="col-md-3 col-xl-3 bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
+            <div class="col-md-3 col-xl-3 bg-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni
+                odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero
+                reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
+            <div class="col-md-3 col-xl-3 bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni
+                odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero
+                reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
+            <div class="col-md-3 col-xl-3 bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni
+                odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero
+                reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
+            <div class="col-md-3 col-xl-3 bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni
+                odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero
+                reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
         </div>
 
-        <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <img src="https://images.unsplash.com/photo-1470963162340-def4fd43095d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="">
+        <div class="display-4">Grid Alignment</div>
+        <div class="row align-items-center">
+            <div class="col-md-3 col-xl-3 bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni
+                odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero
+                reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
+            <div class="col-md-3 col-xl-3 bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni
+                odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero
+                reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
+            <div class="col-md-3 col-xl-3 bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel magni
+                odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium officiis vero
+                reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Officiis est molestias, repellat ullam debitis omnis ratione laudantium recusandae
+                accusantium excepturi quidem nesciunt in autem aperiam illo? Asperiores unde voluptatum voluptate!</div>
+            <div class="col-md-3 col-xl-3 bg-info align-self-end">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Vel magni odit accusamus eligendi, sunt velit impedit cum, perferendis tempore libero, laudantium
+                officiis vero reiciendis. Nobis, molestiae ea. Esse, perspiciatis laboriosam?</div>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-            <img src="https://images.unsplash.com/photo-1552727451-6f5671e14d83?q=80&w=2588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="">
+        <div class="row border justify-content-between">
+            <div class="col-4 bg-primary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, earum. Consequatur consequuntur
+                aspernatur eveniet nobis, quas exercitationem illo, voluptate neque blanditiis at, cum vitae. Eos
+                laudantium hic perferendis repellendus quibusdam.
+            </div>
+            <div class="col-4 bg-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, earum. Consequatur consequuntur
+                aspernatur eveniet nobis, quas exercitationem illo, voluptate neque blanditiis at, cum vitae. Eos
+                laudantium hic perferendis repellendus quibusdam.
+            </div>
         </div>
-        <div class="col-sm-12s col-md-4 col-lg-4 col-xl-4">
-            <img src="https://images.unsplash.com/photo-1490718687940-0ecadf414600?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid" alt="">
+
+        <div class="display-4">Justify Content</div>
+        <div class="row border justify-content-center justify-content-lg-start justify-content-xl-between">
+            <div class="col-md-4 bg-primary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores nobis
+                veritatis ipsa, autem dolorum, excepturi nesciunt earum necessitatibus illo corporis cum. Excepturi
+                mollitia quam dolore qui. Ratione voluptas quaerat laborum!</div>
+            <div class="col-md-4 bg-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores nobis
+                veritatis ipsa, autem dolorum, excepturi nesciunt earum necessitatibus illo corporis cum. Excepturi
+                mollitia quam dolore qui. Ratione voluptas quaerat laborum!</div>
         </div>
+
+
+        <div class="display-4">Image</div>
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img src="https://images.unsplash.com/photo-1470963162340-def4fd43095d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <img src="https://images.unsplash.com/photo-1552727451-6f5671e14d83?q=80&w=2588&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-12s col-md-4 col-lg-4 col-xl-4">
+                <img src="https://images.unsplash.com/photo-1490718687940-0ecadf414600?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="img-fluid" alt="">
+            </div>
         </div>
 
         <h2 class="display-4 ">Buttons <span class="badge badge-pill badge-success">New</span></h2>
-        
+
         <div class="text-center">
             <button type="button" class="btn btn-primary">Primary</button>
             <button type="button" class="btn btn-success">Success</button>
@@ -96,7 +156,56 @@
                 consequatur eum amet sequi.</p>
             <footer class="blockquote-footer">Mr. Lorem Ipsum</footer>
         </blockquote>
+        <div class="display-4">Forms</div>
+        <form action="#nowhere">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Street Address</label>
+                <input type="address" class="form-control" id="address" placeholder="923 Chicken Ranch St">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+                <div class="form-group col-md-3 col-6">
+                    <label for="state">State</label>
+                    <select name="state" id="state" class="form-control">
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3 col-6">
+                    <label for="zip">Zip Code</label>
+                    <input type="text" class="form-control" id="zip">
+                </div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    Sign Me Up
+                </label>
+            </div>
+        </form>
+
+        <div class="form-group">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Register</button>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
