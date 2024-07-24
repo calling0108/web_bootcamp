@@ -1,0 +1,31 @@
+.navbar .navbar-brand {
+    color: #EA1C67;
+}
+
+.navbar .collapse .navbar-nav .nav-link {
+    color: #fff;
+}
+
+body {
+    background-color: #F5D9D5;
+    font-family: "Nunito";
+}
+
+span {
+    color: #EA1C67;
+}
+
+h2 {
+    font-size: 3.3rem;
+    font-weight: 100;
+}
+
+h3 {
+    color: #EA1C67;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+p {
+    color: #F4A7C2;
+}
