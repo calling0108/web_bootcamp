@@ -22,7 +22,7 @@
 <body>
   <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
     <a href="#" class="navbar-brand">CANDY</a>
-    <!-- data-target을 통해 아이콘 클릭 시 나올 목록을 연결해줘야 함, #(id)은 ID라는 표시 -->
+    <!-- ✅data-target을 통해 아이콘 클릭 시 나올 목록을 연결해줘야 함, #(id)은 ID라는 표시 -->
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -60,12 +60,67 @@
   </section>
 
   <section class="cotainer-fluid px-0">
-    <div class="row">
-      <div class="col-6">
+    <div class="row align-items-center content">
+      <div class="col-md-6 order-2 order-md-1">
         <img src="imgs/milk.png" alt="" class="img-fluid">
       </div>
-      <div class="col-6">
+      <div class="col-md-6 text-center order-1 order-md-2">
+        <!-- ✅col-1을 좌우로 해주거나, justiry-content-center를 해주면 됨. -->
+        <div class="row">
+          <!-- ✅order를 이용해서 순서 정하기 -->
+          <div class="col-1 col-lg-2"></div>
+          <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+            <h2>MUSEUM OF CANDY</h2>
+            <img src="imgs/lolli_icon.png" alt="" class="img-fluid d-none d-lg-inline">
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque architecto sapiente
+              provident non vitae earum nesciunt amet error corporis nihil minus, quis facilis vero fugiat eos eius
+              suscipit reiciendis aperiam!</p>
+          </div>
+          <div class="col-1 col-lg-2"></div>
+        </div>
+      </div>
+    </div>
 
+    <div class="row align-items-center content">
+
+      <div class="col-md-6 text-center">
+        <!-- ✅col-1을 좌우로 해주거나, justiry-content-center를 해주면 됨. -->
+        <div class="row">
+          <!-- ✅order를 이용해서 순서 정하기 -->
+          <div class="col-1 col-lg-2"></div>
+          <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+            <h2>MUSEUM OF CANDY</h2>
+            <img src="imgs/lolli_icon.png" alt="" class="img-fluid d-none d-lg-inline">
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque architecto sapiente
+              provident non vitae earum nesciunt amet error corporis nihil minus, quis facilis vero fugiat eos eius
+              suscipit reiciendis aperiam!</p>
+          </div>
+          <div class="col-1 col-lg-2"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="imgs/gumball.png" alt="" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="row align-items-center content">
+      <div class="col-md-6 order-2 order-md-1">
+        <img src="imgs/sprinkles.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-6 text-center order-1 order-md-2">
+        <!-- ✅col-1을 좌우로 해주거나, justiry-content-center를 해주면 됨. -->
+        <div class="row">
+          <!-- ✅order를 이용해서 순서 정하기 -->
+          <div class="col-1 col-lg-2"></div>
+          <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+            <h2>MUSEUM OF CANDY</h2>
+            <img src="imgs/lolli_icon.png" alt="" class="img-fluid d-none d-lg-inline">
+            <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque architecto sapiente
+              provident non vitae earum nesciunt amet error corporis nihil minus, quis facilis vero fugiat eos eius
+              suscipit reiciendis aperiam!</p>
+          </div>
+          <div class="col-1 col-lg-2"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -82,6 +137,23 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
 
+  <!-- <script>
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $("#mainNavbar");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+      });
+    });
+  </script> -->
+
+  <script>
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $("#mainNavbar");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+      });
+    });
+  </script>
 </body>
 
 </html>
