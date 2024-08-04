@@ -1,7 +1,3 @@
-// "new" - Add A Todo
-// "list" - List All Todos
-// "delete" - Remove Specific Todo
-// "quit" - Quit App
 
 
 // ✅1. prompt("What would you like to do?")
@@ -36,14 +32,18 @@ prompt("Enter index of todo to delete");
 // ✅4-1. 종료 후 console.log("OK, YOU QUIT THE APP") 출력
 
 
+let todoObject = {};
 let quit = true;
 
 while (quit) {
-    let order = prompt("What would you like to do?");
-
+    let order = prompt("What would you like to do?").toLowerCase();
+    // 할 일 목록을 선택했을 때, 콘솔에 할 일이 추가되었다고 출력이 되고, "list"에 객체로 항목이 등록되어야 함.
     if (order === "new") {
-        console.log("new")
-        console.log(`${할 일 목록} + added to list`)
+        let newTodo = prompt("Enter new todo").toLowerCase();
+        console.log(`${newTodo} added to list`)
+        for i 
+
+        
     } else if (order === "list") {
         console.log("list")
     } else if (order === "delete") {
