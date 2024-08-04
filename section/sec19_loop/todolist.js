@@ -34,25 +34,35 @@ prompt("Enter index of todo to delete");
 
 let todoObject = {};
 let quit = true;
+let indexCount = 0;
 
 while (quit) {
-    let order = prompt("What would you like to do?").toLowerCase();
+    let order = prompt("What would you like to do?");
     // 할 일 목록을 선택했을 때, 콘솔에 할 일이 추가되었다고 출력이 되고, "list"에 객체로 항목이 등록되어야 함.
     if (order === "new") {
-        let newTodo = prompt("Enter new todo").toLowerCase();
-        console.log(`${newTodo} added to list`)
-        for i 
+        let newTodo = prompt("Enter new todo");
+        console.log(`${newTodo} added to list`);
+        todoObject[indexCount] = newTodo;
+        indexCount ++;
+        console.log(todoObject); 
 
-        
+
     } else if (order === "list") {
-        console.log("list")
+        console.log("**********");
+        for (const [key, values] of Object.entries(todoObject)) {
+            console.log(`${key}: ${values}`);
+        }
+        console.log("**********");
+
     } else if (order === "delete") {
-        console.log("delete")
-        console.log("Todo Removed")
+        let deleteNum = prompt("Enter index of todo to delete");
+        delete todoObject[deleteNum];
+        console.log("Todo Removed");
     } else if (order === "quit") {
         quit = false;
+        console.log("OK, YOU QUIT THE APP");
     } else {
-        console.log("invalid order. Enter a valid order.")
+        console.log("invalid order. Enter a valid order.");
     }
 
 }
