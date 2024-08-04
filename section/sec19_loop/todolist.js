@@ -1,18 +1,15 @@
-// "new" - Add A Todo
-// "list" - List All Todos
-// "delete" - Remove Specific Todo
-// "quit" - Quit App
-
 
 // ✅1. prompt("What would you like to do?")
 
 // ✅1-1. "new" 입력 시, prompt("Enter new todo") 새로운 할 일 목록 추가 메시지 출력
 
-/* ✅1-2. console에 해당 목록 출력
+// ✅1-2. 입력된 할 일 목록은 객체로 저장됨
+
+/* ✅1-3. console에 해당 목록 출력
 ex) console.log(`${할 일 목록} + added to list`); 
 */
 
-// ✅1-3. 다시 1번 prompt 출력
+// ✅1-4. 다시 1번 prompt 출력
 
 /* ✅2. list 입력 시 출력
 
@@ -37,13 +34,19 @@ prompt("Enter index of todo to delete");
 
 
 let quit = true;
+let new_ = "가나다라";
+
+const list = {
+
+}
 
 while (quit) {
     let order = prompt("What would you like to do?");
 
     if (order === "new") {
-        console.log("new")
-        console.log(`${할 일 목록} + added to list`)
+        let newTodo = prompt("Enter new todo");
+        console.log(`${newTodo} + added to list`);
+        
     } else if (order === "list") {
         console.log("list")
     } else if (order === "delete") {
