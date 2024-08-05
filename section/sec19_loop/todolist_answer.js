@@ -3,6 +3,7 @@ let input = prompt("what would you like to do?");
 // 객체를 사용하면 단순하게 생각했을 때, 인덱스 역할인 key 부분의 수가 고정되기에 수정에 용이하지 않음  
 const todos = ["Collect Chicken", "Clean Litter Box"];
 
+// ||(or)은 quit도 아니고 q도 아니면 계속해서 질문을 하게 된다. !가 들어갔기에 차이가 발생
 while (input !== "quit" && input !== "q") {
     if (input === "list") {
         console.log("***********");
@@ -30,3 +31,5 @@ while (input !== "quit" && input !== "q") {
     input = prompt("What would you like to do?");
 
 }
+
+console.log("OK QUIT THE APP!");
