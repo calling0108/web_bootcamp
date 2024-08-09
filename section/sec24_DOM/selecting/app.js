@@ -48,8 +48,35 @@ for (let img of squareImages) {
 //     img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg';
 // }
 
-// const links = document.querySelectorAll('p a');
+
+
+// ✅querySelector
+
+// querySelector는 첫번째로 일치하는 값을 준다
+document.querySelector("p");
+
+// ID 선택
+document.querySelector("#banner");
+
+// class 선택
+document.querySelector(".square");
+
+// 2번째 이미지 선택
+document.querySelector("img:nth-of-type(2)");
+
+// title "java"를 가지고 있는 a 태그 선택
+document.querySelector("a[title='java']");
+
+// ✅querySelectorAll
+// 일치하는 모든 요소를 반환
+
+document.querySelectorAll("a");
+
+// 반복 처리
+// const links = document.querySelectorAll("p a");
 
 // for (let link of links) {
-//     console.log(link.href)
+//     // var.href: 모든 a태그 출처 출력
+//     console.log(link.href);
 // }
+
