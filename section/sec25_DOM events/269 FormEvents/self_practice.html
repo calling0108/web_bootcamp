@@ -9,12 +9,17 @@
 <body>
     <h1>Form Events</h1>
 
-    <form action="/dogs">
-        <input type="text" name="username">
-        <input type="password" name="password">
-        <button>Register</button>0
+    <form action="/dogs" id="tweetForm">
+        <input type="text" name="username" placeholder="username">
+        <input type="text" name="tweet" placeholder="tweet">
+        <button>Post Tweet</button>
     </form>
 
+    <h2>Tweets:</h2>
+    <ul id="tweets">
+
+    </ul>
+    
     <script src="self_practice.js"></script>
 </body>
 </html>
