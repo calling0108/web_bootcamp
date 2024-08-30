@@ -1,0 +1,13 @@
+div .imgTest {
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-duration: 10s;
+    animation-fill-mode: none;
+    animation-name: star;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-range-end: normal;
+    animation-range-start: normal;
+    animation-timeline: auto;
+    animation-timing-function: linear;
+}
