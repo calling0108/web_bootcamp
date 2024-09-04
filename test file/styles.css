@@ -1,16 +1,15 @@
 body {
     margin: 0;
     height: 100vh;
-  }
+}
   
-  #cursor {
-    position: absolute;
-    width: 50px; /* 이미지의 크기를 조정합니다. */
-    height: 50px;
-    pointer-events: none; /* 이미지가 클릭 이벤트를 방해하지 않도록 설정합니다. */
-    background-image: url('https://cdn.imweb.me/upload/S202408276c25d38c398a8/fd1654f750ebc.png');
-    background-size: cover;
-    z-index: 1000;
-    transform: translate(20%, 20%); /* 이미지의 중심이 마우스 포인터에 맞게 조정됩니다. */
-  }
-  
+#cursor {
+  position: absolute;
+  width: 50px; /* 이미지의 크기를 조정합니다. */
+  height: 50px;
+  pointer-events: none; /* 이미지가 클릭 이벤트를 방해하지 않도록 설정합니다. */
+  background-image: url('https://cdn.imweb.me/upload/S202408276c25d38c398a8/fd1654f750ebc.png');
+  background-size: cover;
+  z-index: 1000;
+  transform: translate(25%, 25%); /* 이미지의 중심이 마우스 포인터에 맞게 조정됩니다. */
+}
