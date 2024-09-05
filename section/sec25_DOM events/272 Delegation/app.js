@@ -1,4 +1,18 @@
+const lis = document.querySelectorAll("li");
 
+// ✅li 태그를 클릭하면 제거되도록 조치
+for (let li of lis) {
+    li.addEventListener("click", function (){
+        li.remove();
+    })
+}
+
+// ✅이벤트 위임 : 나중에 추가된 li에도 적용될 수 있도록 부모 요소에 이벤트 수신기를 추가하는 것
+
+
+
+
+// ✅Answer
 const tweetForm = document.querySelector('#tweetForm');
 const tweetsContainer = document.querySelector('#tweets');
 tweetForm.addEventListener('submit', function (e) {
