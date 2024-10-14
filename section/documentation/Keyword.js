@@ -7,6 +7,8 @@
 
 // ✅키워드 예시
 
+// https://velog.io/@re_go/Javascript-%ED%82%A4%EC%9B%8C%EB%93%9C-%EC%B4%9D%EC%A0%95%EB%A6%AC-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%ED%82%A4%EC%9B%8C%EB%93%9C
+
 // 변수 선언 및 할당
 // var, let, const
 
