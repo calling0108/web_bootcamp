@@ -2,7 +2,7 @@
 
 // ✅ 함수 정의(선언)
 
-function funcName(){
+function funcName() {
     // do something
     console.log("Do");
     console.log("Some");
@@ -45,7 +45,7 @@ greet("Elvis", "Presley"); // Elvis P.
 
 function repeat(str, numTimes) {
     let result = "";
-    for (let i=0; i < numTimes; i++) {
+    for (let i = 0; i < numTimes; i++) {
         result += str;
     }
     console.log(result);
@@ -64,7 +64,7 @@ function add(x, y) {
     } else {
         return x + y;
     }
-    
+
 }
 
 const sum = add(9, 4);
