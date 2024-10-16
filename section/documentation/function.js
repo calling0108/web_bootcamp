@@ -1,5 +1,3 @@
-
-
 // ✅ 함수 정의(선언)
 
 function funcName() {
@@ -70,4 +68,40 @@ function add(x, y) {
 const sum = add(9, 4);
 
 console.log(sum); // 13
+
+// ✅ 함수는 값으로 취급 가능
+// JS에서 함수도 객체다
+
+// 변수 a에 value라는 문자열의 값을 담을 수 있음
+let a = "value";
+
+// 아래 정의된 함수는 a라는 JS 변수에 담겨진 일종의 값
+function a() {}
+
+// 다른 방식으로 표현
+let a = function() {}
+
+// 함수는 객체의 값으로 포함 가능, 이렇게 객체의 속성 값으로 담겨진 함수를 메소드(method)라고 부른다
+let a = {
+    b: function() {}
+}
+
+// ✅ 함수의 인자로 전달하는 함수
+
+//  cal(increase, 1)을 실행하면 increase와 값 1이 함수 cal의 인자로 전달됨
+function cal(func, num) {
+    return func(num)
+}
+
+function increase(num) {
+    return num+1
+}
+
+function decrease(num) {
+    return num-1
+}
+
+console.log(cal(increase, 1));
+
+console.log(cal(decrease, 1));
 
