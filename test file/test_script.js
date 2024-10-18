@@ -1,10 +1,8 @@
-var x = 'global';
+console.log(name);
 
-ex();
-console.log(x);
-function ex() {
-  x = 'change';
-  console.log(x);
-}
+var name = "Mike";
 
-alert(x); // 'change'
+
+console.log(nameSecond);
+
+let nameSecond = "Kimchi";
