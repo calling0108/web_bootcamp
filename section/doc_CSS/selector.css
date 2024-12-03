@@ -1,0 +1,22 @@
+
+✅CSS 띄어쓰기, 붙여쓰기
+
+css .test {
+    color: aqua;
+}
+
+css.test {
+    color: red;
+}
+
+
+
+/* ✅조상 자손 선택자 : ul 태그 안에 모든 li 태그에 적용 */
+ul li {
+    border: 1px solid black;
+}
+
+/* ✅부모 자식 선택자 : ul 직계 li 태그만 적용 */
+ul>li {
+    border: 1px soild black;
+}
