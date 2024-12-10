@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
+            color: #888;
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            font-size: 48px;
+            border: 1px solid #bbb;
+            margin: 50px auto;
+            padding: 20px 0;
+            width: 40%;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            margin: 0 auto 50px;
+            width: 80%;
+            border: 1px solid #bbb;
+            padding: 50px 0 50px 50px;
+            /* ✅box-sizing: border-box는 border의 width값이 padding값이 추가되면 늘어날 때, width값을 원래 border width값으로 적용되도록 하는 것. 내부 padding 반영 x */
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 0 50px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h2 span {
+            color: orange;
+            margin-right: 10px;
+        }
+
+        .span1 {
+            background-color: ;
+            color: #777;
+        }
+
+        img {
+            border-radius: 20px;
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>inline 속성 요소</h1>
+
+
+        <div class="container">
+            <h2><span>01.</span> inline 속성의 특징</h2>
+            <ul>
+                <li>인라인 속성은 줄바꿈이 일어나지 않고, 다른 요소와 함께 한 행에 위치하여 옆으로 나열되는 속성을 가지며, 주어진 크기 만큼의 너비를 가진다.
+                <li>
+                <li>width, height, vertical-align이 적용되지 않으며, 줄의 높이는 line-height(줄간격)으로 조절할 수 있습니다.
+                <li>
+                <li>padding은 상하좌우 모두 적용되며, margin은 상하는 적용되지 않고, 좌우만 적용된다
+                <li>
+                <li>display속성으로 inline요소를 block속성이나, inline-block으로 변경할 수 있다.
+                <li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <h2><span>02.</span> inline 요소의 종류</h2>
+            <p>a, img, span, b, strong, button, input, label, i, mark 등이 있습니다.</p>
+        </div>
+
+        <div class="container">
+            <h2><span>03.</span> inline 속성 특성 적용하기</h2>
+            <img src="../../images/grow_cycle.jpg" alt="이미지" style="width: 200px; height: 200px; object-fit: cover;">
+            <a href="https://www.google.com">구글로 바로가기</a>
+            <span><mark>span 태그</mark>는 아무런 의미가 없으나, <i>영역을 묶거나,</i> <b>특정 부분</b>에 <span
+                    class="span3">스타일</span>을 적용하기 위해 아주 많이 사용
+            </span>
+            <mark>형광색 글자</mark>
+        </div>
+    </div>
+</body>
+
+</html>
