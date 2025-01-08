@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position: Sticky</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: "Noto Sans", serif;
+            font-family: "Arial", serif;
+            font-size: 15px;
+            color: #333;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .con {
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .con h2 {
+            font-size: 68px;
+        }
+
+        .sticky {
+            padding: 100px 0;
+        }
+
+        .sticky .listBox {
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .sticky .listBox .box {
+            padding: 50px 80px 60px;
+            border: 2px solid black;
+            margin-bottom: 35px;
+            border-radius: 15px 15px 0 0;
+            position: sticky;
+            top: 100px;
+            background: #fff;
+        }
+
+        .sticky .listBox .box h2 {
+            font-size: 40px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+        }
+
+        .sticky .listBox .box .bottom {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sticky .listBox .box .bottom .num {
+            font-size: 200px;
+
+        }
+
+        .sticky .listBox .box .bottom .rightbox {
+            width: 50%;
+        }
+
+        .sticky .listBox .box .bottom .rightbox .title {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .sticky .listBox .box.a h3 {
+            color: #ffb84f;
+        }
+
+        .sticky .listBox .box.b h3 {
+            color: #90c3cd;
+        }
+
+        .sticky .listBox .box.c h3 {
+            color: #47b172;
+        }
+
+        .sticky .listBox .box.d h3 {
+            color: #c97bf6;
+        }
+        .top {
+            color: #47b172;
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+            display: block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid #47b172;
+            text-align: center;
+            line-height: 25px;
+            padding-top: 18px;
+            box-sizing: border-box;
+        }
+        .top span {
+            display: block;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+</head>
+
+<body>
+    <section class="con" id="abc">
+        <h2>Position : Sticky</h2>
+    </section>
+    <section class="sticky">
+        <ul class="listBox">
+            <li class="box a">
+                <h2>HTML5 | CSS3</h2>
+                <div class="bottom">
+                    <h3 class="num">1</h3>
+                    <div class="rightbox">
+                        <p class="title">position :relative</p>
+                        <p class="textBox">동작 원리로는 요소를 문서 흐름에 따라 배치하지만, top, right, bottom, left 속성을 사용하여 자신의 원래 위치로부터
+                            상대적으로 이동할 수 있습니다. 요소가 이동되더라도 요소가 차지하는 공간은 원래 위치에 유지되며, 다른 요소는 이 요소가 이동되기 전의 공간을 기준으로 배치됩니다.
+                            z-index를 사용할 수 있어 요소의 쌓임 순서를 조정할 수 있습니다.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="box b">
+                <h2>HTML5 | CSS3</h2>
+                <div class="bottom">
+                    <h3 class="num">2</h3>
+                    <div class="rightbox">
+                        <p class="title">position : absolute</p>
+                        <p class="textBox">동작 원리로는 요소를 일반적인 문서 흐름에서 제거하고, 가장 가까운 조상 중 position이 relative, absolute,
+                            fixed 중 하나로 설정된 요소를 기준으로 배치합니다. 만약 그런 조상이 없다면 뷰포트를 기준으로 배치됩니다. 부모 요소나 조상 요소에 position :
+                            relative;를 설정하지 않으면 뷰포트를 기준으로 배치됩니다. top, right, bottom, left 속성을 사용하여 정확한 위치를 지정할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="box c">
+                <h2>HTML5 | CSS3</h2>
+                <div class="bottom">
+                    <h3 class="num">3</h3>
+                    <div class="rightbox">
+                        <p class="title">position : sticky</p>
+                        <p class="textBox">동작 원리로는 요소가 일반적인 문서 흐름에 따라 배치되다가, 스크롤 위치에 따라 지정된 임계점에 도달하면 고정됩니다. top, right,
+                            bottom, left 중 하나 이상의 값을 지정해야 합니다. 요소가 지정된 임계점에 도달하면 해당 위치에 고정되며, 뷰포트 내에서 요소를 고정시키고 싶을 때
+                            사용됩니다.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="box d">
+                <h2>HTML5 | CSS3</h2>
+                <div class="bottom">
+                    <h3 class="num">4</h3>
+                    <div class="rightbox">
+                        <p class="title">position : fixed</p>
+                        <p class="textBox">동작 원리로는 요소를 뷰포트를 기준으로 고정합니다. 요소는 스크롤해도 항상 같은 위치에 머무르며, 뷰포트의 크기가 조정되지 않는 한 요소는
+                            화면에 고정되어 유지됩니다. top, right, bottom, left 속성을 사용하여 요소의 위치를 지정할 수 있습니다.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="con">
+        <h2>Thank You</h2>
+        <a href="#abc" class="top">
+            <span class="lnr lnr-chevron-up"></span>
+            Top
+        </a>
+    </section>
+</body>
+
+</html>
