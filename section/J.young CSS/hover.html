@@ -23,12 +23,11 @@
         .photo {
             width: 650px;
             background: #000;
-            color: #fff;
             margin: 100px auto;
             padding: 100px 0;
             position: relative;
+            border-radius: 30px;
         }
-
 
         .photo p.img {
             width: 350px;
@@ -41,6 +40,7 @@
 
         .photo p.img img {
             width: 100%;
+            transition: all 0.5s;
         }
 
         .photo .title {
@@ -52,9 +52,85 @@
             top: 25%;
             line-height: 1.3;
             text-transform: uppercase;
+            transition: all 0.5s;
         }
 
-        .photo .bottom {}
+        .photo .bottom {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            /* 사진과 20px 떨어지고 .bottom이 중간값으로 갈 수 있도록 */
+            margin: 20px auto 0;
+            /* cross영역에서 자식이 center로 가도록 배치 */
+            align-items: center;
+        }
+
+        .photo .bottom .about {
+            font-size: 15px;
+            color: #00f292;
+            letter-spacing: -1px;
+            font-family: "Montserrat", serif;
+        }
+
+        .photo .bottom .about li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            transition: all 0.5s;
+        }
+
+        .photo .bottom .about li:before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 2px;
+            background: #00f292;
+            left: 0;
+            top: 45%;
+        }
+
+        .photo .bottom .arrow {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #00f292;
+            border-radius: 50%;
+            text-align: center;
+            /* height와 line-height를 동일하게 하면 세로 중앙 정렬이 됨, 근데 안 된거 같음..? 부호라서 그런가? */
+            line-height: 40px;
+            transition: all 0.5s;
+        }
+
+        .photo .bottom .arrow span {
+            font-size: 20px;
+            color: #00f292;
+            transition: all 0.5s;
+        }
+
+        /* hover 효과 */
+        .photo p.img:hover img {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .photo .title:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .photo .bottom .about li:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .photo .bottom .arrow:hover {
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        .photo .bottom .arrow:hover span {
+            color: #fff;
+            cursor: pointer;
+        }
+
     </style>
 
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
@@ -78,7 +154,9 @@
                     <li>Mail : calling0108@gmail.com</li>
                     <li>Instagram: calling0108</li>
                 </ul>
-                <span class="lnr lnr-chevron-right"></span>
+                <p class="arrow">
+                    <span class="lnr lnr-chevron-right"></span>
+                </p>
             </div>
         </div>
     </div>
