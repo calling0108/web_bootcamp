@@ -1,27 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10강 반응형웹소스</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
 
-      *{margin:0; padding:0}  
-      body { font-family: "Noto Sans KR", sans-serif; background: #ddd;}
-      h1{text-align: center;  margin:50px 0;}
-      .conBox {max-width:1200px; margin:0 auto 50px; display: flex; justify-content: space-between; padding: 50px; box-sizing: border-box; border-radius: 10px; background: #eee; box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);}
-      .box {width: 30%;  height: 200px;background: #fff; text-align: center; vertical-align: baseline; display: flex;  justify-content: center; align-items: center; border-radius: 10px;}
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            background: #ddd;
+        }
 
-      /* .textBox {width: 70%; background: red;} */
-      .con2 .box { width: 23%;}
-      .con3 { flex-wrap: wrap;}
-      .con3 .box {width: 48%; margin-bottom: 50px;}
-      .con3 .box:nth-child(3), .con2 .box:nth-child(4) {margin-bottom: 0;}
-      .con4 .left {width: 55%;  display: flex;justify-content: space-between;}
-      .con4 .left .box {width: 48%;}
-      .con4 .right {width: 40%;  }
-      .con4 .right .box {width: 100%; height: 90px;}
-      .con4 .right .box:nth-child(1) {margin-bottom: 20px;}
+        h1 {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .conBox {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background: #eee;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+        }
+
+        .box {
+            width: 30%;
+            height: 200px;
+            background: #fff;
+            text-align: center;
+            vertical-align: baseline;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        /* .textBox {width: 70%; background: red;} */
+        .con2 .box {
+            width: 23%;
+        }
+
+        .con3 {
+            flex-wrap: wrap;
+        }
+
+        .con3 .box {
+            width: 48%;
+            margin-bottom: 50px;
+        }
+
+        .con3 .box:nth-child(3),
+        .con2 .box:nth-child(4) {
+            margin-bottom: 0;
+        }
+
+        .con4 .left {
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con4 .right {
+            width: 40%;
+        }
+
+        .con4 .left .box {
+            width: 48%;
+        }
+
+
+        .con4 .right .box {
+            width: 100%;
+            height: 90px;
+        }
+
+        .con4 .right .box:nth-child(1) {
+            margin-bottom: 20px;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
@@ -35,107 +100,108 @@
             <div class="textBox">
                 <h2>박스1</h2>
                 <p>첫번째박스입니다.</p>
-            </div>     
+            </div>
         </div>
 
         <div class="box">
             <div class="textBox">
-               <h2>박스2</h2>
-               <p>두번째박스입니다.</p>  
-            </div>        
+                <h2>박스2</h2>
+                <p>두번째박스입니다.</p>
+            </div>
         </div>
         <div class="box">
             <div class="textBox">
-               <h2>박스3</h2>
-               <p>세번째박스입니다.</p>
+                <h2>박스3</h2>
+                <p>세번째박스입니다.</p>
             </div>
         </div>
-        </div>
+    </div>
     <div class="conBox con2 ">
-            <div class="box">
-                <div class="textBox">
-                    <h2>박스1</h2>
-                    <p>첫번째박스입니다.</p>
-                </div>     
+        <div class="box">
+            <div class="textBox">
+                <h2>박스1</h2>
+                <p>첫번째박스입니다.</p>
             </div>
-            <div class="box">
-                <div class="textBox">
-                   <h2>박스2</h2>
-                   <p>두번째박스입니다.</p>  
-                </div>        
+        </div>
+        <div class="box">
+            <div class="textBox">
+                <h2>박스2</h2>
+                <p>두번째박스입니다.</p>
             </div>
-            <div class="box">
-                <div class="textBox">
-                   <h2>박스3</h2>
-                   <p>세번째박스입니다.</p>
-                </div>
+        </div>
+        <div class="box">
+            <div class="textBox">
+                <h2>박스3</h2>
+                <p>세번째박스입니다.</p>
             </div>
-            <div class="box">
-                <div class="textBox">
-                   <h2>박스3</h2>
-                   <p>세번째박스입니다.</p>
-                </div>
+        </div>
+        <div class="box">
+            <div class="textBox">
+                <h2>박스3</h2>
+                <p>세번째박스입니다.</p>
             </div>
-     </div>
+        </div>
+    </div>
 
-​
+    ​
 
     <div class="conBox con3">
+        <div class="box">
+            <div class="textBox">
+                <h2>박스1</h2>
+                <p>첫번째박스입니다.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="textBox">
+                <h2>박스2</h2>
+                <p>첫번째박스입니다.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="textBox">
+                <h2>박스3</h2>
+                <p>첫번째박스입니다.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="textBox">
+                <h2>박스4</h2>
+                <p>첫번째박스입니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="conBox con4">
+        <div class="left">
             <div class="box">
                 <div class="textBox">
                     <h2>박스1</h2>
                     <p>첫번째박스입니다.</p>
-                </div>     
+                </div>
             </div>
             <div class="box">
                 <div class="textBox">
                     <h2>박스2</h2>
                     <p>첫번째박스입니다.</p>
-                </div>     
+                </div>
             </div>
+        </div>
+        <div class="right">
             <div class="box">
                 <div class="textBox">
                     <h2>박스3</h2>
                     <p>첫번째박스입니다.</p>
-                </div>     
+                </div>
             </div>
             <div class="box">
                 <div class="textBox">
                     <h2>박스4</h2>
                     <p>첫번째박스입니다.</p>
-                </div>     
-            </div>
-    </div>
-    <div class="conBox con4">
-            <div class="left">
-                <div class="box">
-                    <div class="textBox">
-                        <h2>박스1</h2>
-                        <p>첫번째박스입니다.</p>
-                    </div>    
-                </div>
-                <div class="box">
-                    <div class="textBox">
-                        <h2>박스2</h2>
-                        <p>첫번째박스입니다.</p>
-                    </div>     
                 </div>
             </div>
-            <div class="right">
-                <div class="box">
-                    <div class="textBox">
-                        <h2>박스3</h2>
-                        <p>첫번째박스입니다.</p>
-                    </div>   
-                </div>
-                <div class="box">
-                    <div class="textBox">
-                        <h2>박스4</h2>
-                        <p>첫번째박스입니다.</p>
-                    </div>     
-                </div>
-            </div>         
         </div>
     </div>
+    </div>
 </body>
+
 </html>
