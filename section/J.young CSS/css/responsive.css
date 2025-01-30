@@ -2,13 +2,70 @@
 
 @media (max-width: 1024px) {
     .conBox {
-        width: 90%;padding: 30px;
+        width: 90%;
+        padding: 30px;
+        flex-wrap: wrap;
     }
+
     .con1 .box {
         width: 48%;
     }
+
     .con1 .box:nth-child(3) {
-        display:none;
+        display: none;
     }
 
+    .con2 .box {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .con2 .box:nth-child(3), con2 .box:nth-child(4), .con3 .box:nth-child(3), .con3 .box:nth-child(4) {
+        margin-bottom: 0;
+    }
+
+    .con3 .box {
+        margin-bottom: 20px;
+    }
+
+    .con4 .left, .con4 .right {
+        width: 100%;
+    }
+
+    .con4 .left {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* 반응형 디자인 481px ~ 768px */
+
+@media (max-width : 768px) {
+    .conBox {
+        padding: 20px;
+        margin: 0 auto 40px;
+    }
+
+    .con3 .box {
+        width: 100%;
+    }
+
+    .con3 .box:nth-child(3) {
+        margin-bottom: 20px;
+    }
+}
+
+/* 반응형 디자인 ~ 480px */
+
+@media (max-width : 480px) {
+    .con1 .box, .con2 .box, .con4 .left .box {
+        width: 100%;
+    }
+    .con1 .box:nth-child(1), .con2 .box:nth-child(3), .con4 .box:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    .con4 .left {
+        flex-wrap: wrap;
+    }
 }
