@@ -1,6 +1,18 @@
-console.log(score);
+var x = "global";
 
-score = 80;
-var score;
+function foo() {
+    var x = "local";
+    console.log(x);
+    var b = "test"
+    return console.log(b);
+}
 
-console.log(score);
+foo();
+console.log(x);
+
+
+console.log(foo2);
+let foo2;
+console.log(foo2);
+foo2 = 1;
+console.log(foo2);
