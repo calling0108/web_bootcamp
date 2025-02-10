@@ -11,8 +11,30 @@ foo();
 console.log(x);
 
 
-console.log(foo2);
-let foo2;
-console.log(foo2);
-foo2 = 1;
-console.log(foo2);
+
+
+
+const person = {
+    firstName: "Ungmo",
+    lastName: "Lee",
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+
+    set fullName(name) {
+        [this.firstName, this.lastName] = name.split(' ');
+    }
+};
+
+console.log(person.firstName + ' ' + person.lastName);
+
+person.fullName = "Heegun Lee";
+console.log(person);
+console.log(person.fullName);
+
+let descriptor = Object.getOwnPropertyDescriptor(person, "firstName");
+console.log(descriptor)
+
+descriptor = Object.getOwnPropertyDescriptor(person, "fullName");
+console.log(descriptor);
