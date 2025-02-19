@@ -1,8 +1,12 @@
 'use strict';
 
-function foo() {
-    x = 10;
-    console.log(x);
-}
+(function () {
+    var let = 10;
 
-foo();
+    function foo() {
+        let = 20;
+        console.log(let);
+    }
+    
+    foo();
+}())
