@@ -1,0 +1,176 @@
+ .timeline {
+     position: relative;
+     max-width: 1200px;
+     margin: 20px
+ }
+
+ .timeline::after {
+     content: '';
+     position: absolute;
+     width: 1px;
+     background-color: #ee1d20;
+     /* 세로로 쭉 그어진 긴 선의 색상 */
+     top: 0;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     animation: fadeInDown 1.5s ease forwards;
+ }
+
+ .event {
+     position: relative;
+     width: 100%;
+     opacity: 0;
+     /* 처음에는 투명하게 */
+     animation: fadeInDown 1s ease forwards;
+     animation-delay: calc(var(--delay) * 0.5s);
+     /* 지연 시간 변수 사용 */
+ }
+
+ .event:not(:last-child) {
+     margin-bottom: 50px;
+     /* 연혁들 사이의 빈 공간! 너무 넓으면 좁혀주세요. 30px~50px도 괜찮은 것 같아요. */
+ }
+
+ .event-circle {
+     position: absolute;
+     width: 15px;
+     /* 원의 전체적인 크기 중 너비*/
+     height: 15px;
+     /* 원의 전체적인 크기 중 높이*/
+     background: #ee1d20;
+     /*원의 맨 가운데 동공 같은 부분 색상 */
+     border: 5px solid #F5EFF1;
+     /*원의 외곽 테두리 크기와 색상 */
+     border-radius: 50%;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 100;
+ }
+
+ .event-line {
+     position: absolute;
+     width: 50px;
+     height: 1px;
+     background: #ee1d20;
+     /* 가운데 선에서 뻗어나오는 가지 같은 선의 색상 */
+     top: 50%;
+     z-index: 50;
+ }
+
+ .event-left .event-line {
+     right: 50%;
+     transform: translateX(0%);
+ }
+
+ .event-right .event-line {
+     left: 50%;
+     transform: translateX(10%);
+ }
+
+ .event-content {
+     position: relative;
+     padding: 3px;
+     /* Changed from 5px to 3px */
+     max-width: 300px;
+     width: calc(50% - 50px);
+     /* 화면 너비의 절반에서 여백 뺀 너비 */
+     overflow-wrap: break-word;
+     /* 긴 텍스트가 있을 경우 줄바꿈 처리 */
+     word-wrap: break-word;
+ }
+
+ .event-right .event-content {
+     right: 0px;
+     top: 15px;
+     transform: translateX(195%);
+     margin-left: 120px;
+     /* 연도 박스와의 최소 간격 보장 */
+ }
+
+ .event-left .event-content {
+     left: 0px;
+     top: 15px;
+     transform: translateX(15%);
+     text-align: right;
+     margin-right: 120px;
+     /* 연도 박스와의 최소 간격 보장 */
+ }
+
+ .event-year {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     background: #ee1d20;
+     /* 연도 박스의 배경 색상 */
+     color: white;
+     /* 연도 박스의 연도 글자 색상 */
+     padding: 5px 10px;
+     border-radius: 5px;
+     font-size: 14px;
+     /* 연도 박스의 연도 글자 크기 */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+     width: max-content;
+     /* 내용에 맞게 너비 조정 */
+ }
+
+ .event-left .event-year {
+     right: calc(50% + 50px);
+     /* 기존보다 더 바깥쪽으로 배치 */
+ }
+
+ .event-right .event-year {
+     left: calc(50% + 50px);
+     /* 기존보다 더 바깥쪽으로 배치 */
+ }
+
+ /* 애니메이션 정의 */
+ @keyframes fadeInDown {
+     from {
+         opacity: 0;
+         transform: translateY(-30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ /* 애니메이션 지연 시간을 다르게 적용 */
+ .event:nth-child(1) {
+     --delay: 0;
+ }
+
+ .event:nth-child(2) {
+     --delay: 1;
+ }
+
+ .event:nth-child(3) {
+     --delay: 2;
+ }
+
+ .event:nth-child(4) {
+     --delay: 3;
+ }
+
+ .event:nth-child(5) {
+     --delay: 4;
+ }
+
+ .event:nth-child(6) {
+     --delay: 5;
+ }
+
+ .event:nth-child(7) {
+     --delay: 6;
+ }
+
+ .event:nth-child(8) {
+     --delay: 7;
+ }
+
+ .event:nth-child(9) {
+     --delay: 8;
+ }

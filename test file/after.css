@@ -1,0 +1,128 @@
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #ee1d20;
+    /* 중앙 선 색상 */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInDown 1s ease forwards;
+    animation-delay: calc(var(--delay) * 0.5s);
+    padding: 20px 0;
+}
+
+.event:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.event-circle {
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+    background: #ee1d20;
+    border: 5px solid #F5EFF1;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.event-line {
+    flex-shrink: 0;
+    width: 50px;
+    height: 1px;
+    background: #ee1d20;
+}
+
+.event-content {
+    max-width: 300px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    flex-grow: 1;
+}
+
+.event-year {
+    flex-shrink: 0;
+    background: #ee1d20;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: max-content;
+    text-align: center;
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+    .event {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .event:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    .event-year {
+        order: -1;
+        margin-bottom: 10px;
+    }
+
+    .event-line {
+        display: none;
+        /* 작은 화면에서는 라인 제거 */
+    }
+}
+
+/* 애니메이션 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 애니메이션 지연 시간 설정 */
+.event:nth-child(1) {
+    --delay: 0;
+}
+
+.event:nth-child(2) {
+    --delay: 1;
+}
+
+.event:nth-child(3) {
+    --delay: 2;
+}
+
+.event:nth-child(4) {
+    --delay: 3;
+}
