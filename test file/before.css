@@ -1,176 +1,255 @@
- .timeline {
-     position: relative;
-     max-width: 1200px;
-     margin: 20px
- }
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 10px;
+    box-sizing: border-shadow;
+}
 
- .timeline::after {
-     content: '';
-     position: absolute;
-     width: 1px;
-     background-color: #ee1d20;
-     /* 세로로 쭉 그어진 긴 선의 색상 */
-     top: 0;
-     bottom: 0;
-     left: 50%;
-     transform: translateX(-50%);
-     animation: fadeInDown 1.5s ease forwards;
- }
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: #ee1d20;
+    /* 세로로 쭉 그어진 긴 선의 색상 */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeInDown 1.5s ease forwards;
+    height: auto;
+    min-height: 100vh;
+}
 
- .event {
-     position: relative;
-     width: 100%;
-     opacity: 0;
-     /* 처음에는 투명하게 */
-     animation: fadeInDown 1s ease forwards;
-     animation-delay: calc(var(--delay) * 0.5s);
-     /* 지연 시간 변수 사용 */
- }
+.event {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    /* 처음에는 투명하게 */
+    animation: fadeInDown 1s ease forwards;
+    animation-delay: calc(var(--delay) * 0.5s);
+    /* 지연 시간 변수 사용 */
+}
 
- .event:not(:last-child) {
-     margin-bottom: 50px;
-     /* 연혁들 사이의 빈 공간! 너무 넓으면 좁혀주세요. 30px~50px도 괜찮은 것 같아요. */
- }
+.event:not(:last-child) {
+    margin-bottom: 50px;
+    /* 연혁들 사이의 빈 공간! 너무 넓으면 좁혀주세요. 30px~50px도 괜찮은 것 같아요. */
+}
 
- .event-circle {
-     position: absolute;
-     width: 15px;
-     /* 원의 전체적인 크기 중 너비*/
-     height: 15px;
-     /* 원의 전체적인 크기 중 높이*/
-     background: #ee1d20;
-     /*원의 맨 가운데 동공 같은 부분 색상 */
-     border: 5px solid #F5EFF1;
-     /*원의 외곽 테두리 크기와 색상 */
-     border-radius: 50%;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     z-index: 100;
- }
+.event-circle {
+    position: absolute;
+    width: 15px;
+    /* 원의 전체적인 크기 중 너비*/
+    height: 15px;
+    /* 원의 전체적인 크기 중 높이*/
+    background: #ee1d20;
+    /*원의 맨 가운데 동공 같은 부분 색상 */
+    border: 5px solid #F5EFF1;
+    /*원의 외곽 테두리 크기와 색상 */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
 
- .event-line {
-     position: absolute;
-     width: 50px;
-     height: 1px;
-     background: #ee1d20;
-     /* 가운데 선에서 뻗어나오는 가지 같은 선의 색상 */
-     top: 50%;
-     z-index: 50;
- }
+.event-line {
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    background: #ee1d20;
+    /* 가운데 선에서 뻗어나오는 가지 같은 선의 색상 */
+    top: 50%;
+    z-index: 50;
+}
 
- .event-left .event-line {
-     right: 50%;
-     transform: translateX(0%);
- }
+.event-left .event-line {
+    right: 50%;
+    transform: translateX(0%);
+}
 
- .event-right .event-line {
-     left: 50%;
-     transform: translateX(10%);
- }
+.event-right .event-line {
+    left: 50%;
+    transform: translateX(10%);
+}
 
- .event-content {
-     position: relative;
-     padding: 3px;
-     /* Changed from 5px to 3px */
-     max-width: 300px;
-     width: calc(50% - 50px);
-     /* 화면 너비의 절반에서 여백 뺀 너비 */
-     overflow-wrap: break-word;
-     /* 긴 텍스트가 있을 경우 줄바꿈 처리 */
-     word-wrap: break-word;
- }
+.event-content {
+    position: relative;
+    padding: 10px 20px;
+    /* Changed from 5px to 3px */
+    max-width: 350px;
+    width: calc(50% - 50px);
+    /* 화면 너비의 절반에서 여백 뺀 너비 */
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    /* 긴 텍스트가 있을 경우 줄바꿈 처리 */
+    word-wrap: break-word;
+}
 
- .event-right .event-content {
-     right: 0px;
-     top: 15px;
-     transform: translateX(195%);
-     margin-left: 120px;
-     /* 연도 박스와의 최소 간격 보장 */
- }
 
- .event-left .event-content {
-     left: 0px;
-     top: 15px;
-     transform: translateX(15%);
-     text-align: right;
-     margin-right: 120px;
-     /* 연도 박스와의 최소 간격 보장 */
- }
 
- .event-year {
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     background: #ee1d20;
-     /* 연도 박스의 배경 색상 */
-     color: white;
-     /* 연도 박스의 연도 글자 색상 */
-     padding: 5px 10px;
-     border-radius: 5px;
-     font-size: 14px;
-     /* 연도 박스의 연도 글자 크기 */
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-     width: max-content;
-     /* 내용에 맞게 너비 조정 */
- }
+.event-right .event-content {
+    position: relative;
+    /* padding: 3px; */
+    max-width: 100%;
+    /* 최대 너비를 100%로 설정 */
+    width: calc(50% - 50px);
+    /* 너비를 화면의 절반에서 50px을 뺀 값으로 설정 */
+    overflow-wrap: break-word;
+    /* 텍스트가 잘리지 않도록 줄 바꿈 처리 */
+    word-wrap: break-word;
 
- .event-left .event-year {
-     right: calc(50% + 50px);
-     /* 기존보다 더 바깥쪽으로 배치 */
- }
+    /* 중앙 정렬 후 오른쪽으로 이동 */
+    left: 37%;
+    /* 가운데 정렬 */
+    transform: translateX(50%)
+        /* 가운데에서 오른쪽으로 이동 */
+        translateX(20px);
+    /* 오른쪽으로 20px 이동 */
 
- .event-right .event-year {
-     left: calc(50% + 50px);
-     /* 기존보다 더 바깥쪽으로 배치 */
- }
+    margin-left: 0%;
+    /* 연도 박스와의 간격 조정 */
+}
 
- /* 애니메이션 정의 */
- @keyframes fadeInDown {
-     from {
-         opacity: 0;
-         transform: translateY(-30px);
-     }
+.event-left .event-content {
+    position: relative;
+    /* padding: 3px; */
+    max-width: 350px;
+    width: calc(50% - 50px);
+    /* event-right와 동일한 너비 */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
-     to {
-         opacity: 1;
-         transform: translateY(0);
-     }
- }
+    /* 타임라인 중심 기준 정렬 */
+    left: calc(50% - 120px);
+    transform: translateX(-100%);
+    /* 왼쪽으로 이동 */
+    text-align: right;
+    margin-right: 5%;
+}
 
- /* 애니메이션 지연 시간을 다르게 적용 */
- .event:nth-child(1) {
-     --delay: 0;
- }
+.event-year {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ee1d20;
+    /* 연도 박스의 배경 색상 */
+    color: white;
+    /* 연도 박스의 연도 글자 색상 */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    /* 연도 박스의 연도 글자 크기 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: max-content;
+    /* 내용에 맞게 너비 조정 */
+}
 
- .event:nth-child(2) {
-     --delay: 1;
- }
+.event-left .event-year {
+    right: calc(50% + 50px);
+    /* 기존보다 더 바깥쪽으로 배치 */
+}
 
- .event:nth-child(3) {
-     --delay: 2;
- }
+.event-right .event-year {
+    left: calc(50% + 50px);
+    /* 기존보다 더 바깥쪽으로 배치 */
+}
+@media screen and (max-width: 1024px) {
+    .event-left .event-content {
+        left: calc(50% - 200px);
+        /* 왼쪽으로 더 이동 */
+        max-width: 280px;
+        /* 콘텐츠 너비 조정 */
+        margin-right: 15%;
+        /* 우측 마진 추가 */
+    }
+}
+@media screen and (max-width: 768px) {
+    .event-year {
+        font-size: 12px;
+        padding: 3px 7px;
+    }
 
- .event:nth-child(4) {
-     --delay: 3;
- }
+    .event-circle {
+        width: 10px;
+        height: 10px;
+    }
 
- .event:nth-child(5) {
-     --delay: 4;
- }
+    .event-line {
+        width: 30px;
+    }
 
- .event:nth-child(6) {
-     --delay: 5;
- }
+    .event-content {
+        max-width: 280px;
+        padding: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
- .event:nth-child(7) {
-     --delay: 6;
- }
+    .event-left .event-content {
+        left: calc(50% - 150px);
+        /* 왼쪽으로 더 이동 */
+        max-width: 240px;
+        /* 콘텐츠 너비 조정 */
+        margin-right: 15%;
+        /* 우측 마진 추가 */
+    }
+}
 
- .event:nth-child(8) {
-     --delay: 7;
- }
+@media screen and (max-width: 480px) {
+    .event-left .event-content {
+        left: calc(50%-150px);
+        max-width: 90%;
+        text-align: left;
+    }
+}
 
- .event:nth-child(9) {
-     --delay: 8;
- }
+/* 애니메이션 정의 */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 애니메이션 지연 시간을 다르게 적용 */
+.event:nth-child(1) {
+    --delay: 0;
+}
+
+.event:nth-child(2) {
+    --delay: 1;
+}
+
+.event:nth-child(3) {
+    --delay: 2;
+}
+
+.event:nth-child(4) {
+    --delay: 3;
+}
+
+.event:nth-child(5) {
+    --delay: 4;
+}
+
+.event:nth-child(6) {
+    --delay: 5;
+}
+
+.event:nth-child(7) {
+    --delay: 6;
+}
+
+.event:nth-child(8) {
+    --delay: 7;
+}
+
+.event:nth-child(9) {
+    --delay: 8;
+}
