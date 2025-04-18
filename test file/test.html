@@ -9,162 +9,30 @@
 </head>
 
 <body>
-    <div class="floating-group">
-        <div class="floating-box">
-            <a href="https://member.sellerq.com/bizhome/member/login.php" target="_blank">셀러큐<br>로그인</a>
+    <div class="logo-section-mobile">
+        <!-- 위쪽 5개 로고 -->
+        <div class="logo-row top">
+            <div class="logo-box"><img src="https://cdn.imweb.me/upload/S202504087f4261a59aec3/429291770ace7.jpg"
+                    alt="logo1"></div>
+            <div class="logo-box"><img src="https://cdn.imweb.me/upload/S202504087f4261a59aec3/ed1858114173c.png"
+                    alt="logo2"></div>
+            <div class="logo-box"><img src="https://cdn.imweb.me/upload/S202504087f4261a59aec3/72c8d89cab80f.png"
+                    alt="logo3"></div>
+            <div class="logo-box"><img src="https://cdn.imweb.me/upload/S202504087f4261a59aec3/d0bc7ad7d4dbd.jpg"
+                    alt="logo4"></div>
+            <div class="logo-box"><img src="https://cdn.imweb.me/upload/S202504087f4261a59aec3/0a607754fcf76.png"
+                    alt="logo5"></div>
         </div>
-        <div class="floating-box">
-            <a href="https://member.sellerq.com/bizhome/member/login.php" target="_blank">셀러큐<br>무료 체험</a>
-        </div>
-        <div class="floating-box">
-            <a href="http://sellerqrental.com/" target="_blank">셀러큐<br>렌탈샵</a>
-        </div>
-        <div class="floating-kakao">
-            <a href="https://pf.kakao.com/_kakaochaturl" target="_blank">카카오톡 상담하기 💬</a>
+
+        <!-- 아래쪽 2개 로고 -->
+        <div class="logo-row bottom">
+            <div class="logo-box large"><img src="https://cdn.imweb.me/upload/S202504087f4261a59aec3/64f3d5e144f80.png"
+                    alt="logo6"></div>
+            <div class="logo-box large"><img src="https://cdn.imweb.me/upload/S202504087f4261a59aec3/dc852e29b6b7a.png"
+                    alt="logo7"></div>
         </div>
     </div>
 
-    <style>
-        .floating-group {
-            margin-bottom: 100px;
-            position: fixed;
-            bottom: 30px;
-            right: 20px;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 20px;
-        }
-
-        .floating-box a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 80px;
-            height: 80px;
-            background-color: #003caa;
-            color: #fff;
-            font-weight: bold;
-            font-size: 15px;
-            text-align: center;
-            border-radius: 16px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s;
-        }
-
-        .floating-box a:hover {
-            background-color: #0057e7;
-            color: #fff;
-        }
-
-        .floating-kakao a {
-            display: inline-block;
-            margin-top: 10px;
-            background-color: #fee500;
-            color: #000;
-            font-weight: bold;
-            font-size: 15px;
-            padding: 12px 18px;
-            border-radius: 30px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: background 0.3s;
-        }
-
-        .floating-kakao a:hover {
-            background-color: #ffdd00;
-        }
-
-        @media (max-width: 768px) {
-            .floating-group {
-                bottom: 20px;
-                right: 10px;
-            }
-
-            .floating-box a {
-                width: 70px;
-                height: 70px;
-                font-size: 13px;
-                border-radius: 12px;
-            }
-
-            .floating-kakao a {
-                font-size: 13px;
-                padding: 10px 14px;
-            }
-        }
-
-        /* 애니메이션 정의 */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 공통 초기 스타일 */
-        .floating-box,
-        .floating-kakao {
-            opacity: 0;
-            transform: translateY(20px);
-            /* 초기 위치 */
-            animation: fadeInUp 1s ease forwards;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* 순차적으로 등장 (delay) */
-        .floating-box:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .floating-box:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .floating-box:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-
-        .floating-kakao {
-            animation-delay: 0.6s;
-        }
-
-        /* Hover 효과 - a 요소에 적용해야 확실히 동작함 */
-        .floating-box a:hover,
-        .floating-kakao a:hover {
-            transform: scale(1.1);
-            /* 살짝만 키워도 충분히 효과적 */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-            z-index: 5;
-        }
-
-        .floating-box a,
-        .floating-kakao a {
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
-        }
-    </style>
-
-    <script>
-        const observer = new MutationObserver(() => {
-            const banner = document.querySelector('.f6a1b2c5-0d20-456b-8df7-cffc620df753');
-            if (banner) {
-                banner.style.display = 'none';
-            }
-        });
-
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-
-    </script>
 
 
 </body>
