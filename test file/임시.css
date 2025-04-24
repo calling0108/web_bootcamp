@@ -1,0 +1,4 @@
+/* PC 화면 (기본적으로 숨김) 상단*/
+#doz_header {
+    display: none;
+}
