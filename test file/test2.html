@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="floating-group">
+        <div class="floating-box">
+          <a href="https://member.sellerq.com/bizhome/member/login.php" target="_blank">셀러큐<br>로그인</a>
+        </div>
+        <div class="floating-box">
+          <a href="https://member.sellerq.com/bizhome/member/login.php" target="_blank">셀러큐<br>무료 체험</a>
+        </div>
+        <div class="floating-box">
+          <a href="http://sellerqrental.com/" target="_blank">셀러큐<br>렌탈샵</a>
+        </div>
+      </div>
+      
+      <style>
+        .floating-group {
+          margin-bottom: 100px;
+          position: fixed;
+          bottom: 80px;
+          right: 45px;
+          z-index: 19999;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 20px;
+        }
+      
+        .floating-box a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 80px;
+          height: 80px;
+          background-color: #f7f7f7;
+          color: #000;
+          font-weight: bold;
+          font-size: 15px;
+          text-align: center;
+          border-radius: 16px;
+          text-decoration: none;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          transition: background 0.3s;
+        }
+      
+        .floating-box a:hover {
+          background-color: #cecece;
+          color: #000;
+        }
+      
+        @media (max-width: 768px) {
+          .floating-group {
+            bottom: 20px;
+            right: 10px;
+          }
+      
+          .floating-box a {
+            width: 70px;
+            height: 70px;
+            font-size: 13px;
+            border-radius: 12px;
+          }
+        }
+      
+        /* 애니메이션 정의 */
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      
+        /* 공통 초기 스타일 */
+        .floating-box {
+          opacity: 0;
+          transform: translateY(20px); /* 초기 위치 */
+          animation: fadeInUp 1s ease forwards;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+      
+        /* 순차적으로 등장 (delay) */
+        .floating-box:nth-child(1) {
+          animation-delay: 0s;
+        }
+        .floating-box:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        .floating-box:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+      
+        /* Hover 효과 - a 요소에 적용해야 확실히 동작함 */
+        .floating-box a:hover {
+          transform: scale(1.1); /* 살짝만 키워도 충분히 효과적 */
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+          z-index: 5;
+        }
+      
+        .floating-box a {
+          transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+        }
+      </style>
+
+
+
+</body>
+
+</html>
